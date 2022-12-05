@@ -9,10 +9,9 @@ const orderSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    phone_number: {
-        type: Number,
-        required: true,
-        default: 9876543210
+    user: {
+        type: Object,
+        required: true
     }
 })
 

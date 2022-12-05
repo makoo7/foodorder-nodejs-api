@@ -1,11 +1,11 @@
 import Order from '../models/orders.js';
 
 export const orderItem = async(req, res) => {
-    const { items, total_amount, phone_number } = req.body
+    const { items, total_amount, user } = req.body
     const order = new Order({
         items: items,
         total_amount: total_amount,
-        phone_number: phone_number
+        user: user
     })
 
     try{
