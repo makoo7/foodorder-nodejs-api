@@ -24,3 +24,13 @@ export const ordersList = async(req, res) => {
         res.send('Error '+ err)
     }
 }
+
+export const deleteOrder = async(req, res) => {
+    const {id} = req.params
+    try{
+        const data = await Order.findByIdAndDelete(id)
+        res.json(data);
+    }catch(err){
+        res.send('Error '+err)
+    }
+}
